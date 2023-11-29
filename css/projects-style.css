@@ -1,0 +1,64 @@
+/* code for 'computer graphics' */
+.gallery-box{
+       
+        border-style:solid;
+        color:#223F61;
+        margin: 0 auto;
+        width: 70%;
+        height:400px;
+        border-radius:10px;
+        background:#FCF6E8;
+        overflow-x: hidden; 
+        overflow-y: auto; 
+        position: relative;
+        min-height:100vh;
+    }
+
+
+.gallery-box .gallery{
+        display: flex;
+        flex-wrap:wrap;
+        gap:15px;
+        justify-content: center;
+        padding: 10px;
+}
+ 
+    
+img{
+    width:100%;
+    max-width: 200px;
+    height:auto;
+    padding:10px;
+    display: block;
+}
+
+.wrapper {
+    position: relative;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#223F61;
+  }
+  
+  .wrapper:hover .overlay {
+    opacity: 0.9;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }

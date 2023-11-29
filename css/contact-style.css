@@ -1,0 +1,38 @@
+h3{
+    font-size:25px;
+}
+
+.form-container {
+    margin: auto;
+    text-align: center;
+    color: #223F61;
+    border-radius:10px;
+    box-shadow: 10px 10px;
+
+    background:#FCF6E8;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    width:40%;
+}
+
+form input, form textarea{
+    box-sizing:border-box;
+    display:inline-block;
+    width:100%;
+    padding:10px;
+    margin: 10px 0;
+    text-align: left;
+    cursor: url(/cursor/pointer-1.svg), auto;
+}
+
+form button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:120px;
+    padding:10px;
+    border-radius: 10px;
+    color:white;
+    background:#223F61;
+    cursor: url(/cursor/pointer3.svg), auto;
+}

@@ -1,0 +1,30 @@
+
+
+
+#profile-image{
+    float:left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    /* height:400px;  */
+    /* display:inline-block; */
+}
+
+.intro-message{
+    display:inline-block;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+
+.about-box{
+    border-style:solid;
+    color:#223F61;
+    margin: 0 auto;
+    width: 55%;
+    height:400px;
+    border-radius:10px;
+    background:#FCF6E8;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "/css/contact-style.css">
+    <link rel="stylesheet" type="text/css" href = "/css/general-style.css">
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php"></form>
+    <title>Natalie's Webpage</title>
+</head>
+<body>
+    <header>
+        <a href="about.html" id="Natalie-sticky">Natalie</a>
+
+        <nav class="navigation">
+            <th><a href="about.html" class="nav-button">About</a></th>
+            <div class="dropdown">
+            <th><a  class="nav-button">Projects</a></th>
+            <div class="content">
+            <a href="computer_graphics.html">Computer graphics</a>
+            <a href="illustration.html">Illustration</a>
+            <a href="sketches.html">Sketchbook</a>
+            </div>
+            </div>
+            <th><a href="contact.html" class="nav-button">Contact</a></th>
+        </nav>
+
+    </header>
+
+    <main>
+    <div class="form-container">
+        <form action="https://formsubmit.co/natalie.aramendia@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <h3>Contact</h3>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <textarea id="message" rows="4" placeholder = "Type your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
+</main>
+    <footer>
+        <p>Natalie Aramendia 2023</p>
+    </footer>
+</body>
+</html>
+

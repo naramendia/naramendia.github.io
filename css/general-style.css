@@ -1,0 +1,130 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: url(/cursor/pointer-1.svg), auto;
+}
+
+body{
+    background-color: #93B6EE;
+}
+
+header {
+    background-color: #223F61;
+    padding:1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.navigation{
+    margin-left:auto;
+    margin-right:0;
+}
+
+.nav-button{
+    color: #E78C3B;
+    text-decoration: none;
+    padding:1rem;
+    /* text-align: right; */
+}
+
+#Natalie-sticky{
+    display:inline;
+    text-align: left;
+    position: absolute;    
+    margin: 0; 
+    color:#FCF6E8;
+    text-decoration: none;
+    font-size: 30px;
+    text-shadow: -2px 0 #93B6EE, 0 2px #93B6EE, 2px 0 #93B6EE, 0 -2px #93B6EE;
+}
+
+footer {
+    color: #223F61;
+    padding: 5rem;
+    text-align: right;
+
+}
+
+
+a:hover{
+    color:#93B6EE;
+}
+
+
+.dropdown{
+    text-align: left;
+}
+.dropdown button{
+    border:none;
+    border-radius: 10px;
+    background-color: #93B6EE;
+    font-size: 15px;
+    cursor: pointer;
+    padding:5px 10px;
+    margin-bottom: 20px;
+    /* float:left; */
+}
+
+.dropdown .nav-button{
+    color:#E78C3B;
+}
+.dropdown a{
+    text-decoration: none;
+    padding:5px 10px;
+    display:block;
+    color:aliceblue;
+    /* position:absolute; */
+}
+
+.dropdown:hover .content{
+    display:block;
+}
+
+.dropdown:hover button{
+    background-color: #E78C3B;
+}
+
+.dropdown a:hover{
+    /* background-color: aliceblue; */
+    color: #93B6EE;
+
+}
+
+.dropdown .content{
+    background-color:#E78C3B;
+    box-shadow: 5px 5px;
+    position:absolute;
+    display:none;
+}
+
+.dropdown{
+    display:inline-block;
+}
+
+
+.title-box{
+    text-align:center;
+    font-size: 11px;
+    border-style:solid;
+    margin: 0 auto;
+    width: 55%;
+    border-radius:10px;
+    margin-bottom: 20px;
+    background:#FCF6E8;
+    color:  #223F61;
+}
+
+.jpg-strip{
+    background-color:#223F61;
+    text-align: left;
+    color:#FCF6E8;
+    font-size:20px; 
+    padding: 1px;
+    width:100%;
+    padding-left:12px; 
+    margin-top: -10px;
+
+}
+
+

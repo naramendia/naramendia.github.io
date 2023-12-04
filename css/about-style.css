@@ -1,12 +1,16 @@
-
-
+.navigation > a, .nav-button {
+    font-weight: bold;
+    font-size: 20px;
+}
 
 #profile-image{
     float:left;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    margin-right: 20px;
-    /* height:400px;  */
+    /* margin-left: 20px; */
+    width:30%;
+    height:auto;
+    padding: 20px;
+    /* margin-bottom: 30px;
+    margin-right: 20px; */
     /* display:inline-block; */
 }
 
@@ -14,6 +18,9 @@
     display:inline-block;
     box-sizing:border-box;
     text-align:center;
+    font-size: 21px;
+    margin: 20px;
+    /* font-weight:bold; */
 }
 
 
@@ -22,9 +29,29 @@
     color:#223F61;
     margin: 0 auto;
     width: 55%;
-    height:400px;
+    height: auto;
     border-radius:10px;
     background:#FCF6E8;
-    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-x: hidden;
     overflow-y: auto;
+}
+
+#about-image-text-wrapper{
+    /* margin-top:30px; */
+    display: flex;
+    /* align-items: center; */
+}
+
+@media only screen and (max-width: 850px) {
+    #about-image-text-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    #profile-image {
+        float: none; /* Remove float to center the image */
+        margin: 0 auto; /* Center the image horizontally */
+        width: 50%; /* Adjust the width as needed for smaller screens */
+        margin-bottom: 20px; /* Add some space between image and text */
+    }
 }

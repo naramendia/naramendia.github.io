@@ -14,16 +14,16 @@
         <a href="index.html" id="Natalie-sticky">Natalie</a>
 
         <nav class="navigation">
-            <th><a href="index.html" class="nav-button">About</a></th>
+            <th><a href="index.html" class="nav-button">ABOUT</a></th>
             <div class="dropdown">
-            <th><a  class="nav-button">Projects</a></th>
+            <th><a  class="nav-button">PROJECTS</a></th>
             <div class="content">
-            <a href="computer_graphics.html">Computer graphics</a>
-            <a href="illustration.html">Illustration</a>
-            <a href="sketches.html">Sketchbook</a>
+            <a href="computer_graphics.html">COMPUTER GRAPHICS</a>
+            <a href="illustration.html">ILLUSTRATION</a>
+            <a href="sketches.html">SKETCHBOOK</a>
             </div>
             </div>
-            <th><a href="contact.html" class="nav-button">Contact</a></th>
+            <th><a href="contact.html" class="nav-button">CONTACT</a></th>
         </nav>
 
     </header>
@@ -41,8 +41,15 @@
             <div class = "gallery">
                 <div class="wrapper">
                     <div class="gallery-image">
-                            <img src="/illustrations/gallery1.jpg" alt="colorful woman">
-                        </a>
+                            <img 
+                            src="/illustrations/gallery1.jpg"
+                            alt="colorful woman"
+                            srcset="
+                            /illustrations/gallery1-320.jpg 320w,
+                            /illustrations/gallery1-640.jpg 640w,
+                            /illustrations/gallery1.jpg 1280w
+                            "
+                            />
                     </div>
                 <div class="overlay"><div class="text">"Ella es Bonita" by Natalia Lafourcade</div></div>
                 </div>

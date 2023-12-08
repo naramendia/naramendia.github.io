@@ -65,7 +65,7 @@ a:hover{
     border:none;
     border-radius: 10px;
     background-color: #93B6EE;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     padding:5px 10px;
     margin-bottom: 20px;
@@ -111,7 +111,7 @@ a:hover{
 
 .title-box{
     text-align:center;
-    font-size: 11px;
+    font-size: 12px;
     border-style:solid;
     margin: 0 auto;
     width: 55%;
@@ -134,3 +134,28 @@ a:hover{
 }
 
 
+@media only screen and (max-width: 850px) {
+   .title-box{
+        width: 70%;
+   }
+   #Natalie-sticky{
+    display:none;
+   }
+
+    
+}
+@media (hover: hover){
+    .dropdown:hover .content{
+        display:block;
+    }
+    
+    .dropdown:hover button{
+        background-color: #FCF6E8;
+    }
+    
+    .dropdown a:hover{
+        /* background-color: aliceblue; */
+        color: #93B6EE;
+    
+    }
+}

@@ -5,6 +5,7 @@ h3{
 .form-container {
     margin: auto;
     text-align: center;
+    align-items: center;
     color: #223F61;
     border-radius:10px;
     box-shadow: 10px 10px;
@@ -16,23 +17,34 @@ h3{
     width:40%;
 }
 
-form input, form textarea{
-    box-sizing:border-box;
-    display:inline-block;
-    width:100%;
-    padding:10px;
-    margin: 10px 0;
-    text-align: left;
-    cursor: url(/cursor/pointer-1.svg), auto;
+img{
+    width:50%;
+    height:auto;
+    border-radius:10px;
+    box-shadow: 10px 10px;
 }
 
-form button{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width:120px;
-    padding:10px;
-    border-radius: 10px;
+#contact-button{
+    width:40%;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 20px;
     color:white;
     background:#223F61;
+    font-weight: bold;
+    text-decoration: none;
     cursor: url(/cursor/pointer3.svg), auto;
 }
+
+p{
+    width: 75%;
+    margin-top:30px;
+}
+
+@media only screen and (max-width: 850px) {
+    .form-container{
+        width: 70%;
+    }
+ 
+     
+ }

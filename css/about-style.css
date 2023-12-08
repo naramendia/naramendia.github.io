@@ -1,7 +1,4 @@
-.navigation > a, .nav-button {
-    font-weight: bold;
-    font-size: 20px;
-}
+
 
 #profile-image{
     float:left;
@@ -42,6 +39,8 @@
     /* align-items: center; */
 }
 
+
+
 @media only screen and (max-width: 850px) {
     #about-image-text-wrapper {
         flex-direction: column; /* Stack items vertically */
@@ -53,5 +52,14 @@
         margin: 0 auto; /* Center the image horizontally */
         width: 50%; /* Adjust the width as needed for smaller screens */
         margin-bottom: 20px; /* Add some space between image and text */
+    }
+
+    .about-box{
+        width:80%;
+        height: auto;
+    }
+
+    .intro-message{
+        margin-top: 0px;;
     }
 }

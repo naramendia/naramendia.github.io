@@ -1,11 +1,11 @@
-#myImg {
+.myImg {
   border-radius: 5px;
   /* cursor: url(/cursor/pointer3.svg), auto; */
   transition: 0.3s;
   max-width: 200px;
 }
 
-#myImg:hover {
+.myImg:hover {
   opacity: 0.7;
  
 }

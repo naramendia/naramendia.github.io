@@ -1,5 +1,5 @@
 # Natalie's Portfolio Website
-This is the GitHub repository for the portfolio website for Natalie Aramendia. 
+This is the GitHub repository for the portfolio website for Natalie Aramendia.
 
 Credits:
 
@@ -16,3 +16,6 @@ Accessibility Checker: https://www.accessibilitychecker.org/color-contrast-check
 Kevin Powell on Youtube ("Dealing with hover on mobile"): https://www.youtube.com/watch?v=uuluAyw9AI0
 
 Troubleshooting: [ChatGPT](https://chat.openai.com/)
+
+Special thank you to Professor Xin Tong and TA Xingyu Shen!
+

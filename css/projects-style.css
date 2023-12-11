@@ -22,13 +22,17 @@
 }
 
 
-.gallery img{
+.gallery .myImg{
 width:100%;
 max-width: 200px;
 height:auto;
 padding:10px;
 display: block;
 } 
+
+.gallery img{
+  max-width: 35%;
+}
 
 .graphics-image img{
 max-width: 400px;

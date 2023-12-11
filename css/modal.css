@@ -1,7 +1,9 @@
+/* source: https://www.w3schools.com/howto/howto_css_modal_images.asp */
+
 /* Style the Image Used to Trigger the Modal */
 .myImg {
   border-radius: 5px;
-  cursor: pointer;
+  cursor: url(/cursor/pointer3.svg), auto;
   transition: 0.3s;
   
 }
@@ -13,7 +15,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 2%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -63,6 +65,10 @@
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+}
+
+.close {
+  padding: 15px;
 }
 
 .close:hover,

@@ -144,7 +144,24 @@ a:hover{
 
     
 }
+
 @media (hover: hover){
+    .dropdown:hover .content{
+        display:block;
+    }
+    
+    .dropdown:hover button{
+        background-color: #FCF6E8;
+    }
+    
+    .dropdown a:hover{
+        /* background-color: aliceblue; */
+        color: #93B6EE;
+    
+    }
+}
+
+@media (hover: none){
     .dropdown:hover .content{
         display:block;
     }

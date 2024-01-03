@@ -48,7 +48,7 @@ header {
 footer {
     color: #223F61;
     padding: 5rem;
-    text-align: right;
+    text-align: center;
 
 }
 
@@ -102,6 +102,7 @@ a:hover{
     box-shadow: 5px 5px;
     position:absolute;
     display:none;
+    z-index: 1;
 }
 
 .dropdown{

@@ -11,9 +11,10 @@
 .intro-message{
     display:inline-block;
     box-sizing:border-box;
-    text-align:center;
+    text-align:left;
     font-size: 21px;
     margin: 20px;
+
 
 }
 

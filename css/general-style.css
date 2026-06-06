@@ -11,7 +11,7 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
-    cursor: url(/cursor/pointer-1.svg), auto;
+    cursor: url(../cursor/pointer-1.svg), auto;
     color: #223F61;
 }
 
@@ -121,12 +121,12 @@ footer {
 
 a:hover{
     color:#93B6EE;
-    cursor: url('/cursor/pointer3.svg'), auto;
+    cursor: url('../cursor/pointer3.svg'), auto;
 }
 
 #Natalie-sticky:hover,
 .back-button:hover {
-    cursor: url('/cursor/pointer3.svg'), auto;
+    cursor: url('../cursor/pointer3.svg'), auto;
 }
 
 /* About page: headshot styling - small, floated left with text wrap */
@@ -278,5 +278,103 @@ img,
     .about-content {
         font-size: 18px;
         line-height: 1.6;
+    }
+}
+
+/* Hamburger toggle: hidden on desktop, shown on mobile via the breakpoint below */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 28px;
+    line-height: 1;
+    padding: 0.4rem 0.6rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 0.6rem 1rem;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    #Natalie-sticky {
+        display: inline;
+        position: static;
+        font-size: 22px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin: 0.5rem 0 0;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation > a,
+    .nav-button {
+        font-size: 17px;
+    }
+
+    .navigation > th {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-button {
+        padding: 0.75rem 0.5rem;
+        border-bottom: 1px solid var(--muted);
+        display: block;
+    }
+
+    .container-div {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .about-headshot {
+        width: 60%;
+        max-width: 240px;
+    }
+
+    .about-text,
+    .about-content {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-div {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #Natalie-sticky {
+        font-size: 20px;
+    }
+
+    .about-text,
+    .about-content {
+        font-size: 16px;
     }
 }

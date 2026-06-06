@@ -303,7 +303,7 @@ opacity: 0.9;
   border: none;
 
   background-color: #dadada;
-  cursor: url(/cursor/pointer3.svg), auto;
+  cursor: url(../cursor/pointer3.svg), auto;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
   
@@ -338,4 +338,65 @@ opacity: 0.9;
 .back-button:focus, .back-button:focus-visible, .back-button:active{
   outline: 3px solid #5089c9;
   outline-offset: 3px;
+}
+@media (max-width: 768px) {
+    .gallery-box {
+        width: 92%;
+        margin-bottom: 16px;
+    }
+
+    .tag-filter {
+        gap: 4px;
+    }
+
+    .list {
+        padding: 6px 12px;
+        margin: 4px;
+        font-size: 14px;
+    }
+
+    .filter-instruction {
+        font-size: 14px;
+    }
+
+    .project-pages-title {
+        font-size: 24px;
+    }
+
+    .project-pages-text {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .project-pages-content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .image-grid,
+    .two-col-content,
+    .final-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .capture,
+    .gallery img,
+    .thumbnail img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-pages-title {
+        font-size: 22px;
+    }
+
+    .image-grid,
+    .two-col-content,
+    .final-grid {
+        gap: 8px !important;
+    }
 }

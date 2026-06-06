@@ -61,4 +61,26 @@ img{
     text-align: center;
     padding: 0.8rem 0;
   }
+}
 
+@media (max-width: 768px) {
+    #intro-div {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1.5rem;
+    }
+
+    #intro-message {
+        font-size: 17px;
+    }
+
+    #intro-header {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    #home-img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}

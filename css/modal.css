@@ -3,7 +3,7 @@
 /* Style the Image Used to Trigger the Modal */
 .myImg {
   border-radius: 5px;
-  cursor: url(/cursor/pointer3.svg), auto;
+  cursor: url(../cursor/pointer3.svg), auto;
   transition: 0.3s;
   
 }

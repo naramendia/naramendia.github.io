@@ -9,3 +9,13 @@
 
 .content-text{
 }
+
+@media (max-width: 768px) {
+    .content-header {
+        font-size: 16px;
+    }
+
+    .content-text {
+        font-size: 14px;
+    }
+}

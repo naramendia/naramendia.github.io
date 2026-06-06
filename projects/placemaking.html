@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-grid img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div project-pages-content">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">Placemaking Thailand</h1>
+
+                <div class="section-label">Background</div>
+                <h2 class="statement-heading">Solving urban challenges in Thailand</h2>
+                <p class="body-copy">Urban Studies Lab is Thailand's leading private urban research institute and consultancy, dedicated to finding, testing, and delivering integrated solutions to urban challenges. Recently, Urban Studies Lab partnered with PlacemakingX, an independent program at the forefront of the placemaking movement, to create Placemaking Thailand as the national Thai chapter. PlacemakingX has launched over 24 regional and national placemaking networks, and Placemaking Thailand will serve as the national chapter to unite a network of placemakers, including design firms, academics, and local communities in Thailand. To support this initiative, Urban Studies Lab needs a website to showcase placemaking projects and connect network members.</p>
+
+                <div class="two-col-content">
+                    <div class="two-col-text">
+                        <h2 class="statement-heading">What is Placemaking?</h2>
+                        <p class="body-copy">Placemaking is an approach to planning, design, and management of public spaces that leverages a local community’s assets to create spaces that promote health, well-being, and happiness. It focuses on strengthening the connection between people and the spaces they share, fostering a sense of place and belonging.</p>
+                    </div>
+                    <div class="two-col-image">
+                        <img src="../img/placemaking/what-is-placemaking.png" alt="what is placemaking">
+                    </div>
+                </div> 
+                <div class="section-label">Research</div>
+                <h2 class="statement-heading">Engaging community members in placemaking</h2>
+                <p class="body-copy">I began by conducting a market analysis of other PlacemakingX chapter websites, noting their design, content, and functionality. Additionally, I conducted interviews to understand the placemaking landscape in Thailand and various user needs.</p>
+                <p class="body-copy">Main research questions:</p>
+                <ul class="body-copy">
+                    <li>What is the current placemaking landscape and process in Thailand? What is the relationship between the government, consultancy firms, designers, and community members?</li>
+                    <li>What are examples of past successful collaborations, and what are the motivations of different placemaking user groups?</li>
+                </ul>
+
+                <p class="body-copy">Key takeaways:</p>
+                <ul class="body-copy">
+                    <li><b>Leveraging Expertise:</b> Urban Studies Lab is the main placemaking organization in Thailand, with expertise primarily in research. Collaborating with design firms to further develop projects would significantly increase their impact.</li>
+                    <li><b>Empowering Community Members:</b> There is a significant group of community members and leaders eager to participate in placemaking initiatives, such as starting community gardens. The website could showcase these community members and groups, such as the existing Bangkok Friends of Placemaking Facebook group, as valuable network members and collaborators in projects.</li>
+                    <li><b>Centralized Network:</b> Placemaking Week 2023 in Bangkok was a massive success, catalyzing the involvement of various organizations to put the event and projects together. Using the momentum from Placemaking Week, Placemaking Thailand hopes to create a network where members can reach out and collaborate among themselves, leveraging their unique strengths.</li>
+                    <li><b>Facebook to Website:</b> Facebook is widely used in Thailand for promoting events. However, a dedicated website for Placemaking Thailand would provide greater visibility and foot traffic internationally, allowing users to see all projects and events at a glance and understand the context of Thai placemaking efforts.</li>
+                </ul>
+
+                <div class="section-label">Design & Development</div>
+                <p class="body-copy">After gathering insights from interviews, I developed the information architecture for the pages and features. Using Figma, I created wireframes and prototypes, and established a visual design system. I referred to the current styling guidelines from Facebook, making adjustments for accessibility.</p>
+                <div class="image-grid">
+                    <img src="../img/placemaking/info-arch.png" alt="information architecture">
+                </div>
+
+                <div class="image-grid">
+                    <img src="../img/placemaking/style-guide.png" alt="style guide">
+                </div>
+
+                <div class="image-grid">
+                    <img src="../img/placemaking/wireframe-2.png" alt="style guide">
+                </div>
+
+                <div class="two-col-content">
+                    <div class="two-col-text">
+                        <div class="section-label">Iterations</div>
+                        <p class="body-copy"><b>Contact Page</b><br>
+                        Changed from stacked vertical sections to horizontal; more intuitive in understanding action buttons and various contact channels</p>
+                        <p class="body-copy"><b>Network Members Page</b><br>
+                        Originally, each member of the network would have a dedicated page on the website to showcase it's placemaking strengths & collaboration interests. With feedback, this was then changed to a single page with the logos of the network members. On hover, partner logo lightens indicating user to click (brings user to partner website).</p>
+                    </div>
+                    <div class="two-col-image">
+                        <img class="iterations" src="../img/placemaking/iterations.png" alt="design iterations">
+                    </div>
+                </div>
+                <div class="section-label">Prototype</div>
+                <div class="final-grid" aria-label="Prototype final screenshots">
+                    <div class="final-item"><img src="../img/placemaking/final-11.png" alt="Placemaking final 11"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-9.png" alt="Placemaking final 9"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-4.png" alt="Placemaking final 4"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-6.png" alt="Placemaking final 6"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-1.png" alt="Placemaking final 1"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-7.png" alt="Placemaking final 7"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-2.png" alt="Placemaking final 2"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-3.png" alt="Placemaking final 3"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-8.png" alt="Placemaking final 8"></div>
+                    <div class="final-item"><img src="../img/placemaking/final-10.png" alt="Placemaking final 10"></div>
+                </div>
+
+                
+             
+
+                <div class="section-label">PlacemakingX Global Network</div>
+
+                <div class="image-grid">
+                    <img src="../img/placemaking/network.png" alt="placemaking network">
+                </div>
+                
+                
+                
+
+                </div>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

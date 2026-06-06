@@ -1,4 +1,4 @@
-h3{
+h1{
     font-size:25px;
 }
 
@@ -7,33 +7,61 @@ h3{
     text-align: center;
     align-items: center;
     color: #223F61;
-    border-radius:10px;
     box-shadow: 10px 10px;
-
-    background:#FCF6E8;
+    outline-style: solid;
     display:flex;
-    flex-direction: column;
+    flex-direction: column; 
     padding:10px;
     width:40%;
 }
 
-img{
-    width:50%;
-    height:auto;
-    border-radius:10px;
-    box-shadow: 10px 10px;
+.contact-buttons{
+    display: flex;
+    flex-direction: column; /* stack image above buttons */
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
 }
 
-#contact-button{
-    width:40%;
+.contact-buttons img{
+    max-width: 320px;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.button-row{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.button{
+    /* width:20%;
     border-style: solid;
     padding: 10px;
-    border-radius: 20px;
     color:white;
     background:#223F61;
     font-weight: bold;
     text-decoration: none;
     cursor: url(/cursor/pointer3.svg), auto;
+    text-align: center; */
+
+  padding: 10px 25px; /* More balanced padding */
+  color: white;
+  background: #223F61;
+    font-weight: 600;
+  text-decoration: none;
+  cursor: url(/cursor/pointer3.svg), auto;
+  text-align: center;
+  white-space: nowrap; /* prevents button text from breaking */
+  border: 1px solid transparent; /* if you want a border */
+  border-radius: 4px; /* soften edges */
+  transition: background-color 0.3s ease;
+
+
 }
 
 .form-container p{
@@ -41,10 +69,43 @@ img{
     margin-top:30px;
 }
 
-@media only screen and (max-width: 850px) {
-    .form-container{
-        width: 70%;
+/* Slightly larger text for contact area to match site scale */
+.contact-buttons p{
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--primary);
+}
+
+/* Ensure buttons match site font sizing */
+.button{
+    font-size: 1rem;
+}
     }
  
      
  }
+
+@media only screen and (max-width: 600px) {
+    .contact-buttons img{
+        width: 80%;
+    }
+    .button-row{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .button{
+        width: 100%;
+    }
+}
+
+..linkedin-link {
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: underline; /* always underlined */
+    font-size: 1.05rem; /* slightly larger to match surrounding text */
+}
+
+.linkedin-link:hover {
+    color: var(--accent);
+    text-decoration: underline; /* keep underline on hover */
+}

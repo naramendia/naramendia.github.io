@@ -1,0 +1,64 @@
+#intro-div{
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+#intro-message{ 
+
+  font-size: 25px;
+
+
+}
+
+
+img{
+  width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 2rem 1rem;
+
+  /* Make home page static (no scroll) by ensuring content fits in viewport */
+ 
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* keep homepage static */
+  }
+  main{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #intro-message{ 
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  #home-img{
+    display: block;
+    margin: 0.6rem auto 0;
+    max-height: 35vh; /* shrink image so page doesn't need to scroll */
+    width: auto;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #intro-header{
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 0.4rem;
+  }
+
+  footer{
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-grid img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div project-pages-content">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">Marching Squares: Revealing Geography</h1>
+                <p>
+               Using p5.js, I designed a series of short animations for a website landing page for my team at Esri and LinkedIn recruiting posts. Each animation layers maps from different locations around the world, drawing on historic, topographic, and satellite imagery. I implemented the Marching Squares algorithm for controlled randomness to gradually reveal the underlying geographic layers.  </p>
+                <div class="image-grid">
+                    <video controls playsinline controlsList="nodownload" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        <source src="../video/p5/Venice.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <video controls playsinline controlsList="nodownload" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        <source src="../video/p5/Oahu.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <video controls playsinline controlsList="nodownload" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        <source src="../video/p5/US.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <video controls playsinline controlsList="nodownload" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        <source src="../video/p5/Mexico.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                </div>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

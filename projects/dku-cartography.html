@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-grid img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div project-pages-content">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">Counter-mapping Duke Kunshan University</h1>
+                <p>
+                Creative Cartography final project: Collection of 3 maps counter-mapping (challenging traditional maps to represent alternative perspectives) Duke Kunshan University</p>
+                <div class="image-grid">
+                    <img src="../img/dku-cartography/cartography_1.png" alt="DKU Basemaps">
+                    <p>This map examines the digital representation of Duke Kunshan University (DKU) by layering its paths and pinpoints according to different digital mapping platform basemaps -- Esri, Google, Baidu, and Gaode. Basemaps play a significant role in shaping perceptions and legitimacy of space, yet the layered basemaps have widely varied depictions of the physical layout of DKU. Despite these variations, none of the maps "accurately" capture DKU's evolving campus layout, with paths appearing to be arbitrarily drawn - underscoring the challenges of digital representation in capturing the dynamic nature of physical space.</p>
+                    <img src="../img/dku-cartography/cartography_2.png" alt="Students & Campus Space">
+                    <p>"Students & Campus Space" brings out the myriad ways in which individuals perceive and engage with shared spaces on Duke Kunshan University's campus. Heatmap data was collected by volunteered geographic information submitted by a group of 12 undergraduate students on the following areas of interest: the most beautiful part of campus, where you spend the most time (besides your dorm), and where you would mark DKU as a single point. The resulting heatmaps highlight the similarities of shared experiences, as well as reflect evolving space utilization dynamics post-Phase 2 expansion (evidenced by a disconnect between the "aesthetically pleasing" Phase 1 and the "functional" Phase 2).</p>
+                     <img src="../img/dku-cartography/cartography_3.png" alt="DKU Illustrated Map">
+                     <p>This map offers a personal counter-mapping of DKU, providing a student-centered view of daily campus life. Despite DKU's portrayal as a 'utopia' -   this shiny new global campus built on the rice fields of Kunshan - students often criticize its design as prioritizing stakeholders over students, leading it to feel overly sterile and flat. By coloring and annotating a DKU map from lived experiences, this map emphasizes the vitality of student life while also noting the loss of certain campus essence due to Phase 2 expansion (ghosts of students crossing the pond).</p>
+
+                </div>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

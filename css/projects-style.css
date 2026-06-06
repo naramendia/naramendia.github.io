@@ -1,112 +1,341 @@
-.gallery-box{
-  border-style:solid;
-  color:#223F61;
+.gallery-box {
   margin: 0 auto;
   width: 70%;
-  border-radius:10px;
-  background:#FCF6E8;
-  overflow-x: hidden; 
-  overflow-y: auto; 
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
-  /* min-height:100vh; */
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 
 
-.gallery-box .gallery{
+.gallery-box .gallery {
   display: flex;
-  flex-wrap:wrap;
-  gap:15px;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
   padding: 10px;
 }
 
 
-.gallery .myImg{
-width:100%;
-max-width: 200px;
-height:auto;
-padding:10px;
-display: block;
-} 
+.gallery .myImg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 10px;
+  display: block;
+}
 
-.gallery img{
+.gallery img {
   max-width: 35%;
 }
 
-.graphics-image img{
-max-width: 400px;
-width:100%;
-height:auto;
-padding:10px;
-display: block;
-} 
+.thumbnail img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: block;
+}
 
 
 .wrapper {
-position: relative;
+  position: relative;
 }
 
 .overlay {
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-height: 100%;
-width: 100%;
-opacity: 0;
-transition: .5s ease;
-background-color:#223F61;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #223F61;
 }
 
-.wrapper:hover .overlay {
+/* .wrapper:hover .overlay {
 opacity: 0.9;
+} */
+
+.thumbnail {
+  position: relative;
 }
 
-.text {
-color: white;
-font-size: 20px;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
+.thumbnail:hover .overlay {
+  opacity: 0.9;
+}
+
+
+
+
+
+.projects-header-container {
+    display: flex;
+    align-items: center; /* aligns items vertically */
+    gap: 1rem; /* space between header and image */
+    margin: 2rem 0; /* optional spacing around container */
+}
+
+#projects-cartoon{
+  height: 100px;
+}
+
+
+
+
+.title {
+  color: white;
+  text-align: center;
+  /* keep project title size as-is */
+  font-size: 20px;
+}
+
+.top-subtitle,
+.bottom-subtitle {
+  color: white;
+  text-align: center;
+  /* slightly increased subtitle size for improved legibility */
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.text-container {
+  padding-top: 15%;
 } 
 
-.mypdf{
-width: 100%;
-height: 100vw; 
-border: none;
-transform: scale(1); 
-transform-origin: 0 0;
+
+.project-description {
+  text-align: center;
 }
 
-.project-description{
-text-align: center;
-}
 
-#dataimage{
-  width: 100%;
-}
-
-.charlotte-text{
-  margin:30px;
-  margin-left: 30px;
-}
-
-.charlotte-img{
-  width: 100%;
-  max-width: 500px;
-}
-
-.capture{
+.capture {
   width: 100%
 }
 
 @media only screen and (max-width: 850px) {
-.gallery-box{
-width: 80%;
+  .gallery-box {
+    width: 80%;
+  }
 }
+
+
+
+.project-pages-title{
+  text-align: center;
+  /* ensure page titles stay larger than normal body text */
+  font-size: 32px;
+  line-height: 1.15;
+} 
+
+.project-pages-text{
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+} 
+
+/* Ensure all normal text within a project page uses readable sizing and is centered */
+.project-pages-content {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.project-pages-content p,
+.project-pages-content ul,
+.project-pages-content li {
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+/* Two-column layout for text + image blocks */
+.two-col-content {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* flexible text + fixed image column for consistent layout */
+  gap: 24px;
+  align-items: start;
+  margin: 8px 0 20px 0;
+  text-align: left; /* text column should be left-aligned for readability */
+}
+
+.two-col-content .two-col-image {
+  display: flex;
+  align-items: end; /* align image bottom with text block */
+  justify-content: center;
+}
+
+.two-col-content .two-col-image img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Larger variant for the iterations image */
+.two-col-image img.iterations {
+  max-width: 540px;
+}
+
+@media only screen and (max-width: 850px) {
+  .two-col-content {
+    grid-template-columns: 1fr; /* stack on small screens */
+    text-align: center; /* center text when stacked */
+  }
+  .two-col-content .two-col-image {
+    order: 2; /* show image after text */
+  }
+  .two-col-content .two-col-text {
+    order: 1;
+    text-align: center; /* keep consistency with overall page centering */
+  }
+  .two-col-image img.iterations {
+    max-width: 100%;
+  }
+} 
+
+/* Final screenshots grid (uniform layout for final-* images) */
+.final-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: start;
+  margin: 12px 0 20px;
+}
+
+.final-grid .final-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.final-grid img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 420px; /* cap height to keep the grid tidy */
+}
+
+@media only screen and (max-width: 500px) {
+  .final-grid {
+    grid-template-columns: 1fr;
+  }
+  .final-grid .final-item {
+    padding: 4px;
+  }
+  .final-grid img {
+    max-height: 280px;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-grid video {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.itemBox {
+  transition: 0.5s;
+}
+
+.itemBox.hide {
+  display: none;
+}
+
+.itemBox.active {
+  display: block;
+}
+
+.tag-filter-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filter-instruction {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #223F61;
+  text-align: center;
+}
+
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.list {
+  padding: 8px 20px;
+  margin: 10px;
+  border: none;
+
+  background-color: #dadada;
+  cursor: url(/cursor/pointer3.svg), auto;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+.list.active {
+  background-color: #223F61;
+  color: #dadada;
+
+}
+
+/* Back to Projects button styling */
+.back-button {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 1rem;
+  background-color: var(--primary); /* blue */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 400; /* ensure not bold */
+  /* enforce consistent sizing regardless of parent font-size */
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.back-button:hover{
+  background-color: #173049; /* slightly darker */
+  color: #ffffff;
+}
+
+.back-button:focus, .back-button:focus-visible, .back-button:active{
+  outline: 3px solid #5089c9;
+  outline-offset: 3px;
 }

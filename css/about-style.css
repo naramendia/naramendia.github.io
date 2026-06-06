@@ -1,13 +1,5 @@
 
 
-#profile-image{
-    float:left;
-    width:30%;
-    height:auto;
-    padding: 20px;
-    /* display:inline-block; */
-}
-
 .intro-message{
     display:inline-block;
     box-sizing:border-box;

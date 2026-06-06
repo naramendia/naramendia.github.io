@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .project-pages-text {
+            text-align: left;
+            line-height: 1.75;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            justify-items: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            object-fit: cover;
+        }
+        .image-grid figcaption {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 0.75rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">Next Stop: 125th St</h1>
+                <p class="project-pages-text">
+                <b>Executive Summary:</b> <br>
+Nearly a century after it was first promised, Phase 2 of the Second Avenue Subway began construction in 2017, extending the Q line from 96th Street to 125th Street. This marked the start of a significant transit expansion through East Harlem, increasing connectivity in El Barrio, a historically Puerto Rican neighborhood. Inherent to this massive infrastructure project led by the MTA have been significant property acquisitions along Second Avenue and 125th Street for station facilities and entrances. These acquisitions, achieved through the MTA’s eminent domain power have raised significant concerns around displacement and the future use and disposition of these sites. In partnership with CIVITAS, the project explores how these publicly controlled sites can support equitable, community-driven development. Building on prior rezoning efforts by the New York City Department of City Planning, the studio evaluates zoning, development potential, and policy constraints to identify opportunities for affordable housing, community facilities, and local retail. Through engagement with residents, community boards, and neighborhood organizations, the work emphasizes community-based planning strategies that address displacement concerns while aligning transit investment with local needs and long-term neighborhood stability. <br>
+                
+                <figure class="image-grid">
+                    <img src="../img/2ndAv/station.PNG" alt="Map of California Coastal Trail">
+                    <img src="../img/2ndAv/viaduct.PNG" alt="Map of California Coastal Trail">
+                    <img src="../img/2ndAv/underground.PNG" alt="Map of California Coastal Trail">
+                    <img src="../img/2ndAv/murals.PNG" alt="Map of California Coastal Trail">
+                    <img src="../img/2ndAv/dancing.PNG" alt="Map of California Coastal Trail">
+                    <img src="../img/2ndAv/community.PNG" alt="Map of California Coastal Trail">
+                    <figcaption>Images produced by Natalie to visualize final recommendations</figcaption>
+                </figure>
+
+                <p class="project-pages-text">Read the full report <a href="../pdf/2nd-av-report.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

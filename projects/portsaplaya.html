@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-grid img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: block;
+            margin: 0 auto;
+        }
+        /* Two-column smaller grid for side-by-side images */
+        .image-grid.two-col {
+            /* fixed column widths so narrower images sit centered */
+            grid-template-columns: repeat(2, minmax(0, 260px));
+            /* align items to the end so bottoms line up */
+            align-items: end;
+            gap: 6px; /* closer together */
+            margin-top: 4px; /* closer to the text above */
+            justify-content: center; /* center the two-column group */
+        }
+        .image-grid.two-col img {
+            /* ensure each image aligns to the bottom of its grid cell */
+            align-self: end;
+            display: block;
+            margin: 0 auto;
+        }
+        .image-grid.small img {
+            max-width: 240px; /* slightly smaller */
+        }
+        @media (max-width: 700px) {
+            .image-grid.two-col {
+                grid-template-columns: 1fr;
+            }
+            .image-grid.small img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div project-pages-content">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">
+Parametric Design: Random House Generator for Portsaplaya, Valencia, Spain</h1>
+                <p>
+                    
+
+<p><b>Port Saplaya</b><br>Port Saplaya is a beachfront mixed-use development constructed in the early 1970s. It is often referred to as the "Little Venice" of Valencia due to its intricate network of canals and waterways that wind through the complex. The architecture can be defined as a Mediterranean style, characterized by its stucco exteriors, terracotta roofs, and arched windows. A defining feature of the development is the pastel colors of the houses, which reflect the vibrant nature of this community.</p>
+
+
+<p><b>Visual Research</b><br>My approach began with visual research to study the architectural and decorative styles. I collected images of Port Saplaya and sketched the facades to identify key design elements. These findings led to the formulation of design rules that would guide the parametric sketch.</p>
+
+<div class="image-grid">
+                    <img src="../img/portsaplaya/portsaplaya-reserach.png" alt="Garden Grid Final Image">
+                </div>
+                
+<p><b>Design Rules</b><br>From the images I created design rules that governed house dimensions, color palettes, and facade details. Algorithms determined the size and placement of arched windows and decorative elements.<br>
+<li>Height: between 2-4 stories</li>
+<li>Roof: tiled, clay</li>
+<li>Windows: mix of arch and square</li>
+<li>Color: vibrant-pastel colors</p></li>
+</p>
+
+<div class="image-grid two-col small">
+                    <img src="../img/portsaplaya/portsaplaya-sketches.jpg" alt="PortSaplaya sketches">
+                    <img src="../img/portsaplaya/portsaplaya-buildings.png" alt="PortSaplaya buildings">
+                </div>
+
+<p><b>Random Window Parameters</b><br>From the images I created design rules that governed house dimensions, color palettes, and facade details. Algorithms determined the size and placement of arched windows and decorative elements.<br>
+<li>Window dimensions (width & height)</li>
+<li>Whether window is arched</li>
+<li>Whether there is white border</li>
+<li>Whether there are smaller window openings inside large window</li>
+<li>Whether there are windowsill lines on window</li>
+</p>
+
+<div class="image-grid small">
+                    <img src="../img/portsaplaya/portsaplaya-windows.jpg" alt="PortSaplaya windows">
+                </div>
+<p><b>Final Product</b><br></p>
+
+
+                    <div class="image-grid">
+                    <video controls playsinline controlsList="nodownload" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        <source src="../video/video_processing_2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                
+                </div>
+                </div>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

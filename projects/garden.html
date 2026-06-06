@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/projects-style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general-style.css" />
+    <title>Natalie's Webpage</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.99em' font-size='80'>🧭</text></svg>" />
+    <style>
+        html, body, * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* General image grid (default full-width single column) */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-grid img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: block;
+            margin: 0 auto;
+        }
+        /* Two-column image grid for side-by-side images */
+        .image-grid.two-col {
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+        }
+        /* Smaller images (use for garden_inspo and garden_process) */
+        .image-grid.small img {
+            max-width: 320px;
+        }
+        @media (max-width: 700px) {
+            .image-grid.two-col {
+                grid-template-columns: 1fr;
+            }
+            .image-grid.small img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="Natalie-sticky">Natalie Aramendia</a>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="../projects.html" class="nav-button">PROJECTS</a>
+            <a href="../about.html" class="nav-button">ABOUT</a>
+            <a href="../cv.html" class="nav-button">CV</a>
+            <a href="../contact.html" class="nav-button">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div>
+            <div class="container-div project-pages-content">
+                <a href="../projects.html" class="back-button">&#8592; Back to Projects</a>
+                <h1 class="project-pages-title">Garden Grid: Creative Data Visualization</h1>
+                <div class="image-grid">
+                    <img src="../img/garden/garden_final.png" alt="Garden Grid Final Image">
+                </div>
+                
+               
+                <p><b>Project overview</b><br>For the homework topic of data visualization, I was drawn to the idea of visualizing time. While we all share the same daily timeframe, the ways we organize and distribute our time to achieve our goals are infinitely diverse. This project compares the ways individuals can experience the same random day in September, and explores how one can visualize the progression of “the day”.</p>
+                <p><b>Inspiration from "Dear Data" project</b><br>This visualization was heavily inspired by the analog data drawing project titled "Dear Data". The project follows Giorgia Lupi and Stefanie Posavec, two information designers living on different sides of the Atlantic, as they hand draw their personal data and send it to each other in the form of postcards.
+                Each week they had a different type of data to visualize - that week's goodbyes, laughter, indecision, observed beauty, etc. I resonated with the idea of using our personal data visualization as a way to connect with ourselves and others at a deeper level, and decided to go along the route of visualizing a 'day in the life' of the people closest and most important to me.</p>
+                <div class="image-grid small">
+                    <img src="../img/garden/garden_inspo.png" alt="Garden Grid Final Image">
+                </div>
+                <p><b>Visual research</b><br>Visual Research
+                The project began with visual research to explore various methods of visualizing time, including linear, circular, and grid-based systems. Ultimately, I decided to represent time using a grid system to allow more flexibility and creativity with the final drawing. </p>
+               <div class="image-grid">
+                    <img src="../img/garden/garden_research.png" alt="Garden Grid Final Image">
+                </div>
+               
+                <p><b>Data collection</b><br>To bring this concept to life, I designed an Excel survey and distributed it to six of my closest family members and friends to self-report their activities for the specific September day (Friday, September 22nd, 2023). This data served as the foundation for creating a coded grid system that represents an individual's daily routine.
+
+The columns included:
+
+<li>Hour: Time in half-hour intervals</li>  
+<li>Activity: Main use of time (e.g., sleep, eat, class, etc.)</li>
+<li>Outdoors: Whether the activity took place outdoors</li>
+<li>Energy Level: A rating scale from 1 to 5, with 5 indicating high energy and alertness, and 1 indicating exhaustion</li>
+
+<p><b>Data cleaning</b><br>Following the collection of survey responses, I cleaned the self-recorded data provided by my family and friends. As I cleaned the data, I also created a key and sketched out what each schedule grid would look like under the system.</p>
+               <div class="image-grid two-col">
+                    <img src="../img/garden/garden_sketch.png" alt="Garden Grid Sketch">
+                    <img src="../img/garden/garden_colors.png" alt="Garden Grid Colors">
+                </div>
+<p><b>Processing & Illustrator</b><br>Following the establishment of visualization rules, I wrote code to generate the schedule grid and automatically populate it based on the uploaded CSV file. The output from Processing was exported as an SVG file and further refined in Adobe Illustrator, such as adding hand drawn details.</p>
+<div class="image-grid small">
+                    <img src="../img/garden/garden_process.png" alt="Garden Process Image">
+                </div>
+<p><b>Iterations & design choices</b><br>I initially represented energy levels using circles, but I felt that this approach lacked cohesion in the overall design. I aimed for a visual style that would provide immediate context and a unified look.
+
+To achieve this, I revisited my visual research board and began incorporating floral and garden elements into the design. With this more focused design direction, the icon choices and drawn elements make more sense together in painting an image of a garden. The circles became flowers, horizontal lines became a cute bee, the different grid colors are flower patches, and the sparkling night sky acts as a frame for balance.
+Designs for the Key: <br>
+
+<li><b>“En Route” Bee:</b> I decided to draw a little bee (with dashed lines showing its trail) to represent the movement of being “en route”, moving from one place to another, from one activity to another.</li>
+<li><b>“Get ready for the day / bed” flower:</b> Since sleep is being represented by a deep blue, I thought a smaller deep blue flower on a white grid square could represent the transition from state of sleeping to being awake (or the other way around).</li>
+<li><B>“Meal” flower:</B> I drew a flower with concentric circles to represent “powering up” and new energy that comes from eating. </li>
+<li><b>Size of flowers:</b> In the visualization, the size of the flower in each cell represents the reported energy level (on a scale of 1-5). I collected data on both energy level and satisfaction, but chose to focus on the energy level to illustrate its fluctuations during the day and not over-complicate the drawing.</li>
+
+</p>
+
+<p><b>Final design</b><br>For the final design, I displayed the personal garden grids of my six participants side-by-side on a poster. On the right hand side there is a key to read the individual versions of this random September day.</p>
+<div class="image-grid">
+                    <img src="../img/garden/garden_final.png" alt="Garden Grid Final Image">
+                </div>
+</p>
+            </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Natalie Aramendia</p>
+    </footer>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if (
+                        itemBox[k].getAttribute('data-item').includes(dataFilter) ||
+                        dataFilter === 'all'
+                    ) {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

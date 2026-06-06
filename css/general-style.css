@@ -1,19 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root{
+    --primary: #223F61;
+    --accent: #93B6EE;
+    --muted: #dadada;
+    --label-color: #C9B1F0; /* light purple for section labels */
+}
+
 *{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
     cursor: url(/cursor/pointer-1.svg), auto;
+    color: #223F61;
+}
+
+.container-div{
+    position:left;
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+
+}
+
+/* UI/UX case study typography helpers */
+.section-label {
+    font-family: 'Poppins', sans-serif;
+    color: var(--label-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.2rem 0 0.4rem 0;
+}
+
+.statement-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin: 0.2rem 0 0.8rem 0;
+}
+
+.body-copy { /* explicit body copy class if needed */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+.header{
+  font-size: 22px;
+  padding-bottom: 20px;
+
 }
 
 
 body{
-    background-color: #93B6EE;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #223F61;
+    align-items: center;
+    background-color: #ffffff;
     padding:1rem;
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
+    
+}
+
+#projects-header{
+    text-align: center;
 }
 
 
@@ -23,14 +81,23 @@ header {
 }
 
 .nav-button{
-    color: #FCF6E8;
+    color: #223F61;
     text-decoration: none;
     padding:1rem;
-    /* text-align: right; */
+    /* make nav text regular weight */
+    font-weight: 400;
+}
+
+/* Visible outline for nav buttons when focused/clicked */
+.nav-button:focus,
+.nav-button:focus-visible,
+.nav-button:active {
+    outline: 3px solid #5089c9;
+    outline-offset: 3px;
 }
 
 .navigation > a, .nav-button {
-    font-weight: bold;
+
     font-size: 18px;
 }
 
@@ -39,10 +106,9 @@ header {
     text-align: left;
     position: absolute;    
     margin: 0; 
-    color:#FCF6E8;
+    color:#223F61;
     text-decoration: none;
     font-size: 30px;
-    text-shadow: -2px 0 #93B6EE, 0 2px #93B6EE, 2px 0 #93B6EE, 0 -2px #93B6EE;
 }
 
 footer {
@@ -55,83 +121,32 @@ footer {
 
 a:hover{
     color:#93B6EE;
+    cursor: url('/cursor/pointer3.svg'), auto;
 }
 
-
-.dropdown{
-    text-align: left;
-}
-.dropdown button{
-    border:none;
-    border-radius: 10px;
-    background-color: #93B6EE;
-    font-size: 16px;
-    cursor: pointer;
-    padding:5px 10px;
-    margin-bottom: 20px;
-    /* float:left; */
+#Natalie-sticky:hover,
+.back-button:hover {
+    cursor: url('/cursor/pointer3.svg'), auto;
 }
 
-.dropdown .nav-button{
-    color: #FCF6E8;
-}
-.dropdown a{
-    text-decoration: none;
-    padding:5px 10px;
-    display:block;
-    color: #223F61;
-    /* position:absolute; */
-}
-
-.dropdown:hover .content{
-    display:block;
+/* About page: headshot styling - small, floated left with text wrap */
+.about-headshot {
+    float: left;
+    width: 280px;
+    max-width: 40%;
+    margin: 0 20px 12px 0;
+    border-radius: 0; /* square edges */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.dropdown:hover button{
-    background-color: #FCF6E8;
-}
-
-.dropdown a:hover{
-    /* background-color: aliceblue; */
-    color: #93B6EE;
-
-}
-
-.dropdown .content{
-    background-color:#FCF6E8;
-    box-shadow: 5px 5px;
-    position:absolute;
-    display:none;
-    z-index: 1;
-}
-
-.dropdown{
-    display:inline-block;
-}
-
-
-.title-box{
-    text-align:center;
-    font-size: 12px;
-    border-style:solid;
-    margin: 0 auto;
-    width: 55%;
-    border-radius:10px;
-    margin-bottom: 20px;
-    background:#FCF6E8;
-    color:  #223F61;
-}
-
-.jpg-strip{
-    background-color:#223F61;
-    text-align: left;
-    color:#FCF6E8;
-    font-size:20px; 
-    padding: 1px;
-    width:100%;
-    padding-left:12px; 
-    margin-top: -10px;
-
+@media (max-width: 700px) {
+    .about-headshot {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+        width: 60%;
+        max-width: 320px;
+    }
 }
 
 
@@ -175,5 +190,93 @@ a:hover{
         /* background-color: aliceblue; */
         color: #93B6EE;
     
+    }
+}
+
+
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: #352e7e;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #352e7e;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: #352e7e;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: #352e7e;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #352e7e;
+    color: #fff;
+}
+
+/* Make all images square (no rounded corners) - overrides inline/page-level rules */
+img,
+.thumbnail img,
+.gallery img,
+.image-grid img,
+.myImg,
+.about-headshot {
+    border-radius: 0 !important;
+}
+
+
+
+
+::selection {
+  color: rgb(179, 17, 92);
+  background: #f1f9c4;
+}
+
+/* About page specific typography adjustments */
+.about-text {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 70ch;
+    margin-top: 0;
+}
+
+.about-text ul, .about-text li {
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 850px) {
+    .about-text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+/* Ensure all content in the about content block uses the increased sizing */
+.about-content {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.about-content p,
+.about-content ul,
+.about-content li {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+@media only screen and (max-width: 850px) {
+    .about-content {
+        font-size: 18px;
+        line-height: 1.6;
     }
 }
